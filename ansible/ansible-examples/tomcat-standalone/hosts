@@ -1,0 +1,4 @@
+[tomcat-servers]
+10.128.0.13 ansible_user=fahda 
+
+
