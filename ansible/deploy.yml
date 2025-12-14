@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 - name: Deploy static website
+=======
+- name: Deploy nginx web server
+>>>>>>> f83be46 (Initial CI/CD project with Terraform, Ansible, and Jenkinsfile)
   hosts: web
   become: yes
 
   tasks:
+<<<<<<< HEAD
     - name: Ensure nginx is installed
       apt:
         name: nginx
@@ -22,4 +27,19 @@
         owner: www-data
         group: www-data
         mode: '0644'
+=======
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Ensure nginx is running
+      service:
+        name: nginx
+        state: started
+>>>>>>> f83be46 (Initial CI/CD project with Terraform, Ansible, and Jenkinsfile)
 
