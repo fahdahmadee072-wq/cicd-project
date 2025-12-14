@@ -1,8 +1,11 @@
 # Terraform
 .terraform/
 *.tfstate
-*.tfstate.*
+*.tfstate.backup
 terraform.tfvars
-crash.log
-.crash.log
+
+# Jenkins / runtime
+inventory-dev
+terraform/vm_ip.txt
+
 
