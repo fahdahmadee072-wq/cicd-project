@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-variable "project" {
-=======
 variable "project_id" {
->>>>>>> f83be46 (Initial CI/CD project with Terraform, Ansible, and Jenkinsfile)
   type = string
 }
 
@@ -15,22 +11,8 @@ variable "zone" {
 }
 
 variable "vm_name" {
-<<<<<<< HEAD
-  type = string
-}
-
-variable "machine_type" {
-  type = string
-}
-
-variable "image" {
-  type = string
-}
-
-variable "network" {
-=======
   type    = string
-  default = "target-vm"
+  default = "ansible-target"
 }
 
 variable "machine_type" {
@@ -44,7 +26,6 @@ variable "ssh_user" {
 }
 
 variable "ssh_public_key" {
->>>>>>> f83be46 (Initial CI/CD project with Terraform, Ansible, and Jenkinsfile)
   type = string
 }
 
