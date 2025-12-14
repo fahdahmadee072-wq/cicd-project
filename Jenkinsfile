@@ -21,8 +21,8 @@ pipeline {
     stage('Prepare Inventory') {
       steps {
         sh '''
-          echo "[web]" > inventory
-          echo "$(cat terraform/vm_ip.txt) ansible_user=fahda" >> inventory
+          echo "[web]" > inventory-dev
+          echo "$(cat terraform/vm_ip.txt) ansible_user=fahda" >> inventory-dev
         '''
       }
     }
@@ -32,7 +32,7 @@ pipeline {
         sh '''
           cd ansible
           ANSIBLE_HOST_KEY_CHECKING=False \
-          ansible-playbook -i ../inventory deploy.yml
+          ansible-playbook -i ../inventory-dev  deploy.yml
         '''
       }
     }
